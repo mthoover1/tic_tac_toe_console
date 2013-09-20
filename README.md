@@ -19,6 +19,7 @@ Play
 
 Instructions
 -----
-- Enter board size ("3" would mean a 3x3 board)
-- Human is "X", computer is "O"
+- Enter board size ("3" for 3x3 board, "4" for 4x4 board)
+- Random coin toss determines who goes first
+- Player 1 is "X", Player 2 is "O"
 - Refer to numbered diagram above empty board for tile numbers before moves
