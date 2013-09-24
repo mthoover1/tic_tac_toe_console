@@ -1,3 +1,6 @@
-source 'https://rubygems.org'
+gem 'tic_tac_toe', :git => 'https://github.com/mthoover1/tic-tac-toe.git'
 
-gem 'tic_tac_toe'#, :path => '../tic_tac_toe'
+group :test do
+	gem 'rspec'
+  gem 'tic_tac_toe', :git => 'https://github.com/mthoover1/tic-tac-toe.git'
+end
