@@ -10,16 +10,15 @@ Prerequisites
 Setup
 -----
 - Clone
-- Also clone the gem at https://github.com/mthoover1/tic-tac-toe
-- Build and install gem
+- Run 'bundle'
 
 Play
 -----
-'ruby tic_tac_toe.rb'
+- Run 'bundle exec ruby tic_tac_toe.rb'
 
 Instructions
 -----
 - Enter board size ("3" for 3x3 board, "4" for 4x4 board)
-- Random coin toss determines who goes first
+- Random coin toss determines who goes first (human or computer)
 - Player 1 is "X", Player 2 is "O"
 - Refer to numbered diagram above empty board for tile numbers before moves
