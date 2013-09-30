@@ -18,7 +18,7 @@ class GameController
 
 		show_board
 
-		until @board.won? || @board.tied? || @board.future_cats_game?
+		until @board.game_over?
 			@next_player.move
 			update_next_player
 			show_board
