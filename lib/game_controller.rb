@@ -19,6 +19,7 @@ class GameController
 		show_board
 
 		until @board.game_over?
+			Kernel.sleep(0.5) if @next_player.class == ComputerPlayer && @board.move_count > 0
 			@next_player.move
 			update_next_player
 			show_board
