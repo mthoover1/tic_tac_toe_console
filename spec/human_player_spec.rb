@@ -17,7 +17,7 @@ describe HumanPlayer do
                        "---"])
     interface.stub(gets: "5\n")
     human.stub(:puts)
-    board.should_receive(:update).with(5, "X")
+    board.should_receive(:update_tile).with(5, "X")
     human.move
   end
 end

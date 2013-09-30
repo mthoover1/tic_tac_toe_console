@@ -13,6 +13,6 @@ class HumanPlayer
 			puts @interface.prompt_human
 			move = @interface.get_input
 		end
-		@board.update(move, @symbol)
+		@board.update_tile(move, @symbol)
 	end
 end
