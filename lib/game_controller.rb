@@ -1,9 +1,6 @@
 class GameController
 	attr_reader :next_player, :board, :computer, :player1, :player2
 
-	SYMBOL1 = "X"
-	SYMBOL2 = "O"
-
 	def initialize(interface, board = nil, player1 = nil, player2 = nil)
 		@interface = interface
 		@board = board
@@ -25,7 +22,7 @@ class GameController
 			show_board
 		end
 
-		puts @interface.display_results(@board, SYMBOL1, SYMBOL2)
+		puts @interface.display_results(@board, @board.symbol1, @board.symbol2)
 	end
 
 	def create_board
@@ -44,15 +41,15 @@ class GameController
 		coin = ["heads","tails"].sample
 
 		if coin == "heads"
-			@player1 = HumanPlayer.new(@board, SYMBOL1, @interface)
-			@player2 = ComputerPlayer.new(@board, SYMBOL2)
+			@player1 = HumanPlayer.new(@board, @board.symbol1, @interface)
+			@player2 = ComputerPlayer.new(@board, @board.symbol2)
 		else
-			@player1 = ComputerPlayer.new(@board, SYMBOL1)
-			@player2 = HumanPlayer.new(@board, SYMBOL2, @interface)
+			@player1 = ComputerPlayer.new(@board, @board.symbol1)
+			@player2 = HumanPlayer.new(@board, @board.symbol2, @interface)
 		end
 
-		# @player1 = ComputerPlayer.new(@board, SYMBOL1)
-		# @player2 = ComputerPlayer.new(@board, SYMBOL2)
+		# @player1 = ComputerPlayer.new(@board, @board.symbol1)
+		# @player2 = ComputerPlayer.new(@board, @board.symbol2)
 
 		@next_player = @player1
 	end
