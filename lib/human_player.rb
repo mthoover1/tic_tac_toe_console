@@ -1,5 +1,5 @@
 class HumanPlayer
-	attr_reader :board
+	attr_reader :board, :symbol
 
 	def initialize(board, symbol = "X", interface)
 		@board = board
@@ -7,12 +7,12 @@ class HumanPlayer
 		@interface = interface
 	end
 
-	def move
+	def get_move
 		move = 0
 		until @board.tile_open?(move)
 			puts @interface.prompt_human
 			move = @interface.get_input
 		end
-		@board.update_tile(move, @symbol)
+		move
 	end
 end

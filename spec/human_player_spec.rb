@@ -11,13 +11,12 @@ describe HumanPlayer do
     SpecHelper.make_moves(board, moves)
   end
 
-  it "should make a move where the human tells it to" do
+  it "should get the human's move from the human input" do
     make_moves(board, ["---",
                        "---",
                        "---"])
     interface.stub(gets: "5\n")
     human.stub(:puts)
-    board.should_receive(:update_tile).with(5, "X")
-    human.move
+    human.get_move.should eq(5)
   end
 end
