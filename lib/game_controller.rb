@@ -48,9 +48,6 @@ class GameController
 			@player2 = HumanPlayer.new(@board, @board.symbol2, @interface)
 		end
 
-		# @player1 = ComputerPlayer.new(@board, @board.symbol1)
-		# @player2 = ComputerPlayer.new(@board, @board.symbol2)
-
 		@next_player = @player1
 	end
 
