@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mthoover1/tic-tac-toe.git
-  revision: e43401c321f39048aacc30b688906c4fb96b960e
+  revision: 18040794f67f47031cff2075c36c908c443d8cbf
   specs:
     tic_tac_toe (0.0.2)
 
